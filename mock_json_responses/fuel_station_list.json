@@ -1,0 +1,65 @@
+[
+  {
+    "city" : "Nugegoda",
+    "desc" : "This is the best city in the world!",
+    "lat" : 6.8699302,
+    "long" : 79.8885822,
+    "icon" : "img/gas_stations.png"
+  },
+  {
+    "city" : "Thimbirigasyaya",
+    "desc" : "This city is aiiiiite!",
+    "lat" :6.8907111,
+    "long" : 79.8640074,
+    "icon" : "img/gas_stations.png"
+  },
+  {
+    "city" : "Maradana",
+    "desc" : "This is the second best city in the world!",
+    "lat" : 6.929294,
+    "long" : 79.8655108,
+    "icon" : "img/gas_stations.png"
+  },
+  {
+    "city" : "Bambalapitiya",
+    "desc" : "This city is live!",
+    "lat" : 6.8947927,
+    "long" : 79.8601547,
+    "icon" : "img/gas_stations.png"
+  },
+  {
+    "city" : "Peliyagoda",
+    "desc" : "Sin City...'nuff said!",
+    "lat" : 6.9556294,
+    "long" : 79.8829943,
+    "icon" : "img/gas_stations.png"
+  },
+  {
+    "city" : "Kandy",
+    "desc" : "Sin City...'nuff said!",
+    "lat" : 7.2930312,
+    "long" : 80.6378483,
+    "icon" : "img/gas_stations.png"
+  },
+  {
+    "city" : "Digana",
+    "desc" : "Kali's place!",
+    "lat" : 7.2952927,
+    "long" : 80.7345852,
+    "icon" : "img/gas_stations.png"
+  },
+  {
+    "city" : "Bogambara Stadium",
+    "desc" : "Kali's place!",
+    "lat" : 7.288812,
+    "long" : 80.6352938,
+    "icon" : "img/gas_stations.png"
+  },
+  {
+    "city" : "Peradeniya",
+    "desc" : "Kali's place!",
+    "lat" : 7.2640514,
+    "long" : 80.5929321,
+    "icon" : "img/gas_stations.png"
+  }
+]
