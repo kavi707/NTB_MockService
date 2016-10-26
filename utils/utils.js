@@ -36,7 +36,7 @@ module.exports.createLoggerDir = function () {
 module.exports.sendResponse = function (res, statusCode, statusMessage, dataObject) {
 
     var responseObj;
-    if (dataObject != 'EMPTY') {
+    /*if (dataObject != 'EMPTY') {
         responseObj = {
             "status":"ERROR",
             "msg":statusMessage,
@@ -47,15 +47,16 @@ module.exports.sendResponse = function (res, statusCode, statusMessage, dataObje
             "status":"ERROR",
             "msg":statusMessage
         };
-    }
+    }*/
+    responseObj = dataObject;
 
     if (statusCode == 200) {
         logger.info('NTBMockService:util/sendResponse - [' + statusCode + '] success response sent');
-        responseObj.status = "SUCCESS";
+        //responseObj.status = "SUCCESS";
         res.send(responseObj);
     } else {
         logger.info('NTBMockService:util/sendResponse - [' + statusCode + '] error response sent');
-        responseObj.status = "ERROR";
+        //responseObj.status = "ERROR";
         res.send(statusCode, responseObj);
     }
 };

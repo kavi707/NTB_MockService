@@ -21,6 +21,12 @@ module.exports.createAppEndPoints = function (app) {
         service.getAppUpdateStatus(req, res);
     });
 
+    app.post("/ntb/login", function(req, res) {
+        logger.info("================================================================================================");
+        logger.info('NTBMockService:system_end_points/createSystemEndPoints - [POST/ntb/login]');
+        service.userLogin(req, res);
+    });
+
     app.get("/ntb/atms", function(req, res) {
         logger.info("================================================================================================");
         logger.info('NTBMockService:system_end_points/createSystemEndPoints - [GET/ntb/atms]');
