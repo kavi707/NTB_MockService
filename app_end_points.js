@@ -15,6 +15,12 @@ module.exports.createAppEndPoints = function (app) {
     });
 
     // NTB specific
+    app.get("/ntb/check/updates/:currentVersion", function(req, res) {
+        logger.info("================================================================================================");
+        logger.info('NTBMockService:system_end_points/createSystemEndPoints - [GET/ntb/check/updates/:currentVersion]');
+        service.getAppUpdateStatus(req, res);
+    });
+
     app.get("/ntb/atms", function(req, res) {
         logger.info("================================================================================================");
         logger.info('NTBMockService:system_end_points/createSystemEndPoints - [GET/ntb/atms]');
