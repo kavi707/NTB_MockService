@@ -68,8 +68,20 @@ module.exports.getFuelStationLocations = function (req, res) {
     utils.sendResponse(res, 200, "Fuel stations retrieve successfully", fuelStations);
 };
 
-module.exports.getSampleDatList = function (req, res) {
-    logger.info('NTBMockService:services/getSampleDatList - Get sample data list');
-    var sampleDataList = JSON.parse(fs.readFileSync('./mock_json_responses/sample_data_list.json', 'utf8'));
+module.exports.getSampleDataList = function (req, res) {
+    logger.info('NTBMockService:services/getSampleDataList - Get sample data list');
+    var sampleDataList = JSON.parse(fs.readFileSync('./mock_json_responses/demo/sample_data_list.json', 'utf8'));
     utils.sendResponse(res, 200, "Sample data content list", sampleDataList);
+};
+
+module.exports.getSampleUserList = function (req, res) {
+    logger.info('NTBMockService:services/getSampleUserList - Get sample user list');
+
+    var startIndex = req.params.startIndex;
+    var endIndex = req.params.endIndex;
+
+    var sampleUserList = JSON.parse(fs.readFileSync('./mock_json_responses/demo/sample_user_list.json', 'utf8'));
+    var selectedUserList = sampleUserList.slice(startIndex, endIndex);
+
+    utils.sendResponse(res, 200, "Sample data content list", selectedUserList);
 };

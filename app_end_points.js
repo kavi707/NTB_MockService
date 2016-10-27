@@ -49,6 +49,12 @@ module.exports.createAppEndPoints = function (app) {
     app.get("/demo/sample_list", function(req, res) {
         logger.info("================================================================================================");
         logger.info('NTBMockService:system_end_points/createSystemEndPoints - [GET/demo/sample_list]');
-        service.getSampleDatList(req, res);
+        service.getSampleDataList(req, res);
+    });
+
+    app.get("/demo/sample_user_list/:startIndex/:endIndex", function(req, res) {
+        logger.info("================================================================================================");
+        logger.info('NTBMockService:system_end_points/createSystemEndPoints - [GET/demo/sample_user_list]');
+        service.getSampleUserList(req, res);
     });
 };
