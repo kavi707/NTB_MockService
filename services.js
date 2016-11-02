@@ -68,6 +68,18 @@ module.exports.getFuelStationLocations = function (req, res) {
     utils.sendResponse(res, 200, "Fuel stations retrieve successfully", fuelStations);
 };
 
+module.exports.getFDCalculatorData = function (req, res) {
+    logger.info('NTBMockService:services/getFDCalculatorData - Get FD Calculator Data');
+    var fdCalPrefix = JSON.parse(fs.readFileSync('./mock_json_responses/calculators/fd_calculator_prefix.json', 'utf8'));
+    utils.sendResponse(res, 200, "Calculator prefix retrieve successfully", fdCalPrefix);
+};
+
+module.exports.getFDCalculate = function (req, res) {
+    logger.info('NTBMockService:services/getFDCalculate - calculate fd premium');
+
+    //TODO - Need to do the response
+};
+
 module.exports.getSampleDataList = function (req, res) {
     logger.info('NTBMockService:services/getSampleDataList - Get sample data list');
     var sampleDataList = JSON.parse(fs.readFileSync('./mock_json_responses/demo/sample_data_list.json', 'utf8'));
