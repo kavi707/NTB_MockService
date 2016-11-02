@@ -84,11 +84,13 @@ module.exports.getFDCalculate = function (req, res) {
     var investmentPeriod = calculatorParameter.investmentPeriod;
     var investmentReceived = calculatorParameter.investmentReceived;
 
+    var newAmt = amount/10;
+
     var responseObj = {
         "calculatorParameter": {
             "totalAmount" : {
                 "currencyType" : currencyType,
-                "amount" : amount/10
+                "amount" : newAmt.toFixed(2)
             },
             "nominalInterestRate " : "12%",
             "annualEquivalentRate" : "10%"
