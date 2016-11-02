@@ -77,7 +77,25 @@ module.exports.getFDCalculatorData = function (req, res) {
 module.exports.getFDCalculate = function (req, res) {
     logger.info('NTBMockService:services/getFDCalculate - calculate fd premium');
 
-    //TODO - Need to do the response
+    var calculatorParameter = req.body.calculatorParameter;
+
+    var amount = calculatorParameter.totalAmount.amount;
+    var currencyType = calculatorParameter.totalAmount.currencyType;
+    var investmentPeriod = calculatorParameter.investmentPeriod;
+    var investmentReceived = calculatorParameter.investmentReceived;
+
+    var responseObj = {
+        "calculatorParameter": {
+            "totalAmount" : {
+                "currencyType" : currencyType,
+                "amount" : amount/10
+            },
+            "nominalInterestRate " : "12%",
+            "annualEquivalentRate" : "10%"
+        }
+
+    };
+    utils.sendResponse(res, 200, "FD calculated response", responseObj);
 };
 
 module.exports.getSampleDataList = function (req, res) {

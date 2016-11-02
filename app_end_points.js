@@ -54,7 +54,7 @@ module.exports.createAppEndPoints = function (app) {
     app.post("/ntb/fd/calculate", function(req, res) {
         logger.info("================================================================================================");
         logger.info('NTBMockService:system_end_points/createSystemEndPoints - [POST/ntb/fd/calculate]');
-        service.userLogin(req, res);
+        service.getFDCalculate(req, res);
     });
 
     // Sample specific
