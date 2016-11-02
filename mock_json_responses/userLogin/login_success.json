@@ -1,3 +1,7 @@
 {
-  "token":"sample_auth_token"
+  "access_token":"sample_access_token",
+  "refresh_token":"sample_refresh_token",
+  "scope":"default",
+  "token_type":"Bearer",
+  "expires_in":2734
 }
