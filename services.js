@@ -92,7 +92,7 @@ module.exports.getFDCalculate = function (req, res) {
                 "currencyType" : currencyType,
                 "amount" : newAmt.toFixed(2)
             },
-            "nominalInterestRate " : "12%",
+            "nominalInterestRate" : "12%",
             "annualEquivalentRate" : "10%"
         }
 
