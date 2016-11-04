@@ -74,6 +74,12 @@ module.exports.getFDCalculatorData = function (req, res) {
     utils.sendResponse(res, 200, "Calculator prefix retrieve successfully", fdCalPrefix);
 };
 
+module.exports.getTransactionHistory = function (req, res) {
+    logger.info('NTBMockService:services/getTransactionHistory - Get Transaction History');
+    var fdCalPrefix = JSON.parse(fs.readFileSync('./mock_json_responses/transactions/ntb_transaction_history.json', 'utf8'));
+    utils.sendResponse(res, 200, "Transaction history retrieve successfully", fdCalPrefix);
+};
+
 module.exports.getFDCalculate = function (req, res) {
     logger.info('NTBMockService:services/getFDCalculate - calculate fd premium');
 

@@ -57,6 +57,12 @@ module.exports.createAppEndPoints = function (app) {
         service.getFDCalculate(req, res);
     });
 
+    app.get("/ntb/transaction_history", function(req, res) {
+        logger.info("================================================================================================");
+        logger.info('NTBMockService:system_end_points/createSystemEndPoints - [GET/ntb/transaction_history]');
+        service.getTransactionHistory(req, res);
+    });
+
     // Sample specific
     app.get("/demo/sample_list", function(req, res) {
         logger.info("================================================================================================");
