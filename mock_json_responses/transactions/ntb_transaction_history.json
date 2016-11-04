@@ -1,24 +1,27 @@
 {
   "AccountNo": "4568 9877 1111 7594",
-  "Balance": "96,70000",
+  "Balance": "96700.00",
   "Transaction": [
     {
       "Date": "28-Oct-2016",
-      "Amount": "-5,000.00",
+      "Amount": "-5000.00",
       "Description": "Friday night out with my office buddies, dinner at gallery cafe Colombo.",
-      "Balance": "96,700.00"
+      "Balance": "96700.00",
+      "Currency": "LKR"
     },
     {
       "Date": "19-Oct-2016",
-      "Amount": "+1,200.00",
+      "Amount": "+1200.00",
       "Description": "Payment received by selling the bicycle.",
-      "Balance": "101,700.00"
+      "Balance": "101700.00",
+      "Currency": "LKR"
     },
     {
       "Date": "10-Oct-2016",
-      "Amount": "-1,500.00",
+      "Amount": "-1500.00",
       "Description": "Medical checkup made to Asiri Hospital.",
-      "Balance": "100,500.00"
+      "Balance": "100500.00",
+      "Currency": "LKR"
     }
   ]
 }
