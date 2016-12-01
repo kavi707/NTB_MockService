@@ -1,0 +1,25 @@
+{
+  "accountsSummary": {
+    "totalBalance": {
+      "currencyCode":"LKR",
+      "amount":500000
+    },
+    "defaultAccountNumber":"123456789",
+    "accounts":[
+      {
+        "accountNumber":"123456789",
+        "nickName":"MySavings",
+        "currencyCode":"LKR",
+        "balance":500000,
+        "accountTypeName":"savings"
+      },
+      {
+        "accountNumber":"456789123",
+        "nickName":"MyCurrent",
+        "currencyCode":"LKR",
+        "balance":300000,
+        "accountTypeName":"current"
+      }
+    ]
+  }
+}

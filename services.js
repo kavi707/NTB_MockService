@@ -80,6 +80,28 @@ module.exports.getTransactionHistory = function (req, res) {
     utils.sendResponse(res, 200, "Transaction history retrieve successfully", fdCalPrefix);
 };
 
+module.exports.getBankAccounts = function (req, res) {
+    logger.info('NTBMockService:services/getBankAccounts - Get Bank Accounts');
+    var bankAccounts = JSON.parse(fs.readFileSync('./mock_json_responses/accounts/bank_accounts.json', 'utf8'));
+    utils.sendResponse(res, 200, "Bank accounts retrieve successfully", bankAccounts);
+};
+
+module.exports.getBankAccountFromAccountNumber = function (req, res) {
+    logger.info('NTBMockService:services/getBankAccounts - Get Bank Accounts');
+
+    var accountNumber = req.params.accountNumber;
+    var bankAccount = null;
+    if (accountNumber == 123456789) {
+        bankAccount = JSON.parse(fs.readFileSync('./mock_json_responses/accounts/bank_account_savings.json', 'utf8'));
+        utils.sendResponse(res, 200, "Bank accounts retrieve successfully", bankAccount);
+    } else if (accountNumber == 456789123) {
+        bankAccount = JSON.parse(fs.readFileSync('./mock_json_responses/accounts/bank_account_current.json', 'utf8'));
+        utils.sendResponse(res, 200, "Bank accounts retrieve successfully", bankAccount);
+    } else {
+        utils.sendResponse(res, 404, "Bank accounts retrieve successfully", bankAccount);
+    }
+};
+
 module.exports.getFDCalculate = function (req, res) {
     logger.info('NTBMockService:services/getFDCalculate - calculate fd premium');
 

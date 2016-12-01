@@ -63,6 +63,18 @@ module.exports.createAppEndPoints = function (app) {
         service.getTransactionHistory(req, res);
     });
 
+    app.get("/ntb/1.0/api/bank-accounts", function(req, res) {
+        logger.info("================================================================================================");
+        logger.info('NTBMockService:system_end_points/createSystemEndPoints - [GET/ntb/1.0/api/bank-accounts]');
+        service.getBankAccounts(req, res);
+    });
+
+    app.get("/ntb/1.0/api/bank-accounts/:accountNumber", function(req, res) {
+        logger.info("================================================================================================");
+        logger.info('NTBMockService:system_end_points/createSystemEndPoints - [GET/ntb/1.0/api/bank-accounts/:accountNumber]');
+        service.getBankAccountFromAccountNumber(req, res);
+    });
+
     // Sample specific
     app.get("/demo/sample_list", function(req, res) {
         logger.info("================================================================================================");

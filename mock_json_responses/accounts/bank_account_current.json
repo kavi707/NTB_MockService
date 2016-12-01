@@ -1,0 +1,16 @@
+{
+  "account":{
+    "accountNumber":"456789123",
+    "nickName":"MyCurrent",
+    "accountType":"current",
+    "openDate":"01-01-2000",
+    "currencyCode":"LKR",
+    "currentBalance":300000,
+    "minBalance":100,
+    "holdAmount":0,
+    "availableAmount":300000,
+    "unclearBalance":0,
+    "inwardCheckAmount":0,
+    "jointAccount":null
+  }
+}
